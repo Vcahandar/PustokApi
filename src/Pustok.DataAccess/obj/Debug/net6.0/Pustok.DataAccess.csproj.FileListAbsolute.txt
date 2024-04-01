@@ -1,0 +1,17 @@
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.DataAccess\bin\Debug\net6.0\Pustok.DataAccess.deps.json
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.DataAccess\bin\Debug\net6.0\Pustok.DataAccess.runtimeconfig.json
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.DataAccess\bin\Debug\net6.0\Pustok.DataAccess.dll
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.DataAccess\bin\Debug\net6.0\Pustok.DataAccess.pdb
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.DataAccess\bin\Debug\net6.0\Pustok.Core.dll
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.DataAccess\bin\Debug\net6.0\Pustok.Core.pdb
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.DataAccess\obj\Debug\net6.0\Pustok.DataAccess.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.DataAccess\obj\Debug\net6.0\Pustok.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.DataAccess\obj\Debug\net6.0\Pustok.DataAccess.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.DataAccess\obj\Debug\net6.0\Pustok.DataAccess.AssemblyInfo.cs
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.DataAccess\obj\Debug\net6.0\Pustok.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.DataAccess\obj\Debug\net6.0\Pustok.DataAccess.csproj.CopyComplete
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.DataAccess\obj\Debug\net6.0\Pustok.DataAccess.dll
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.DataAccess\obj\Debug\net6.0\refint\Pustok.DataAccess.dll
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.DataAccess\obj\Debug\net6.0\Pustok.DataAccess.pdb
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.DataAccess\obj\Debug\net6.0\Pustok.DataAccess.genruntimeconfig.cache
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.DataAccess\obj\Debug\net6.0\ref\Pustok.DataAccess.dll
