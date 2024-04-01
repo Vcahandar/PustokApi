@@ -1,37 +1,19 @@
-using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Mvc.Filters;
-using Microsoft.EntityFrameworkCore;
 using Pustok.API.Extensions;
-using Pustok.Business.DTOs.CommonDtos;
-using Pustok.Business.Exceptions;
-using Pustok.Business.Exceptions.AuthorExceptions;
-using Pustok.Business.MappingProfiles;
-using Pustok.Business.Services.Implementations;
-using Pustok.Business.Services.Interfaces;
-using Pustok.DataAccess.Contexts;
-using Pustok.DataAccess.Repositories.Implementations;
-using Pustok.DataAccess.Repositories.Interfaces;
-using System.Net;
+using Pustok.DataAccess.ServiceRegisterations;
+using Pustok.Business.ServiceRegisterations;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<AppDbContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
-});
+builder.Services.DataAccessServiceRegister(builder.Configuration);
+builder.Services.ServiceLayerServiceRegister();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-builder.Services.AddAutoMapper(typeof(AuthorMapper).Assembly);
-
-builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
-
-
-builder.Services.AddScoped<IAuthorService, AuthorService>();
 
 var app = builder.Build();
 
