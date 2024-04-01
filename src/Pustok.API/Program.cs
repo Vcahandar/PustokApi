@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
+using Pustok.API.Extensions;
 using Pustok.Business.DTOs.CommonDtos;
 using Pustok.Business.Exceptions;
 using Pustok.Business.Exceptions.AuthorExceptions;
@@ -43,31 +44,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseExceptionHandler(error =>
-{
-    error.Run(async context =>
-    {
-        var feature = context.Features.Get<IExceptionHandlerFeature>();
-        HttpStatusCode statusCode = HttpStatusCode.InternalServerError;
-        string message = "Unexpected error occured";
-
-        if(feature.Error is IBaseException)
-        {
-            var exception = (IBaseException)feature.Error;
-            statusCode = exception.StatusCode;
-            message = exception.ErrorMessage;
-        }
-
-
-        var response = new ResponseDto(statusCode,message);
-
-
-        context.Response.StatusCode = (int)statusCode;
-        await context.Response.WriteAsJsonAsync(response);
-        await context.Response.CompleteAsync();
-
-    });
-});
+app.AddExceptionHandler();
 
 app.UseAuthorization();
 
