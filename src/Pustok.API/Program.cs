@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
 using Pustok.Business.DTOs.CommonDtos;
+using Pustok.Business.Exceptions;
 using Pustok.Business.Exceptions.AuthorExceptions;
 using Pustok.Business.MappingProfiles;
 using Pustok.Business.Services.Implementations;
@@ -49,15 +50,14 @@ app.UseExceptionHandler(error =>
         var feature = context.Features.Get<IExceptionHandlerFeature>();
         HttpStatusCode statusCode = HttpStatusCode.InternalServerError;
         string message = "Unexpected error occured";
-        switch (feature.Error)
+
+        if(feature.Error is IBaseException)
         {
-            case AuthorNotFoundByIdException:
-                statusCode = HttpStatusCode.NotFound;
-                message = feature.Error.Message;
-                break;
-            default:
-                break;
+            var exception = (IBaseException)feature.Error;
+            statusCode = exception.StatusCode;
+            message = exception.ErrorMessage;
         }
+
 
         var response = new ResponseDto(statusCode,message);
 
