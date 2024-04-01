@@ -21,55 +21,24 @@ namespace Pustok.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] string? search)
         {
-            try
-            {
                 var authors = await _authorService.GetAllAuthorsAsync(search);
                 return Ok(authors);
-            }
-            catch (Exception)
-            {
-                return StatusCode((int)HttpStatusCode.InternalServerError, new ResponseDto
-                    (HttpStatusCode.InternalServerError, "Unexpected error occured"));
-            }
-
         }
 
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(Guid id)
         {
-            try
-            {
                 var author = await _authorService.GetAuthorByIdAsync(id);
                 return Ok(author);
-            }
-            catch (AuthorNotFoundByIdException ex)
-            {
-                return NotFound(new ResponseDto(HttpStatusCode.NotFound, ex.Message));
-            }
-            catch (Exception)
-            {
-                return StatusCode((int)HttpStatusCode.InternalServerError, new ResponseDto
-                    (HttpStatusCode.InternalServerError, "Unexpected error occured"));
-            }
-
         }
 
         [HttpPost]
         public async Task<IActionResult> Create(AuthorPostDto authorPostDto)
         {
-            try
-            {
                 await _authorService.CreateAuthorAsync(authorPostDto);
                 return StatusCode((int)HttpStatusCode.Created,
-                    new ResponseDto(HttpStatusCode.Created, "Authir successfully created"));
-            }
-
-            catch (Exception)
-            {
-                return StatusCode((int)HttpStatusCode.InternalServerError, new ResponseDto
-                    (HttpStatusCode.InternalServerError, "Unexpected error occured"));
-            }
+                    new ResponseDto(HttpStatusCode.Created, "Author successfully created"));
         }
     }
 }
