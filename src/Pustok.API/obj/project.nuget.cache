@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "Mv2l4JBB42fJb3no5xyoQi30ACDgnRC9+Gd9Zgar39UV8JR0GTepExnfzn1976gSnrWw7hMIjsUWRilHnd+Thg==",
+  "dgSpecHash": "3TPEy6Zgn5Fd8VWeng4Six1kSFDm3x2xvop2mgZNdFwX7EafLO+N+ULd8bLGhDe4pvzbqBSPX/ThECP87p3auw==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\Pustok.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.0\\fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.7\\microsoft.data.sqlclient.2.1.7.nupkg.sha512",

@@ -18,8 +18,8 @@ namespace Pustok.DataAccess.Contexts
         }
 
         public DbSet<Author> Authors { get; set; } = null!;
-        //public DbSet<Book> Books { get; set; } = null!;
-        //public DbSet<BookAuthor> BookAuthors { get; set; } = null!;
+        public DbSet<Book> Books { get; set; } = null!;
+        public DbSet<BookAuthor> BookAuthors { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,7 +27,7 @@ namespace Pustok.DataAccess.Contexts
             //  modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
             modelBuilder.Entity<Author>().HasQueryFilter(a => !a.IsDeleted);
-            //modelBuilder.Entity<Book>().HasQueryFilter(a => !a.IsDeleted);
+            modelBuilder.Entity<Book>().HasQueryFilter(a => !a.IsDeleted);
             base.OnModelCreating(modelBuilder);
         }
 
@@ -38,7 +38,6 @@ namespace Pustok.DataAccess.Contexts
             {
                 switch (entry.State)
                 {
-
                     case EntityState.Added:
                         entry.Entity.CreatedAt = DateTime.UtcNow;
                         entry.Entity.CreatedBy = "Admin";

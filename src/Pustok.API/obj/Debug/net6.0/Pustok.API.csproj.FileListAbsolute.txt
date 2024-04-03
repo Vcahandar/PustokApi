@@ -74,3 +74,6 @@ C:\Users\HP\Desktop\PustokAPI\src\Pustok.API\obj\Debug\net6.0\Pustok.API.genrunt
 C:\Users\HP\Desktop\PustokAPI\src\Pustok.API\obj\Debug\net6.0\ref\Pustok.API.dll
 C:\Users\HP\Desktop\PustokAPI\src\Pustok.API\bin\Debug\net6.0\Humanizer.dll
 C:\Users\HP\Desktop\PustokAPI\src\Pustok.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\HP\Desktop\PustokAPI\src\Pustok.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

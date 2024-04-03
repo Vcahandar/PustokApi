@@ -22,6 +22,7 @@ namespace Pustok.DataAccess.ServiceRegisterations
             });
 
             services.AddScoped<IAuthorRepository, AuthorRepository>();
+            services.AddScoped<IBookRepository, BookRepository>();
 
             return services;
 

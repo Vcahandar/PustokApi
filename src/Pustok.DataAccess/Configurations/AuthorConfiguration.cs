@@ -16,7 +16,7 @@ namespace Pustok.DataAccess.Configurations
             builder.Property(a => a.Fullname).IsRequired(true).HasMaxLength(250);
             builder.Property(a => a.IsDeleted).HasDefaultValue(false);
 
-            //builder.HasMany(a => a.BookAuthors).WithOne(ba => ba.Author);
+            builder.HasMany(a => a.BookAuthors).WithOne(ba => ba.Author);
         }
     }
 }

@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "cd7DeFoHeJtdPrS8RMKMh2W5goMhiSReprEj5h/+3dCsp0LDua6mBMRhM4fpIR57crq6AfSbnl6Be4bUPJdhuQ==",
+  "dgSpecHash": "R6K/nISBberHzotmZjuAaarNZmdsNM9V6LQ2RPWinUlj6h9r4UnCUqTKBRM9cAIlUchXCOhbXjQLU5EQdeeIUQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.Business\\Pustok.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.0\\fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.7\\microsoft.data.sqlclient.2.1.7.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

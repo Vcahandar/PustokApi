@@ -23,14 +23,34 @@ namespace Pustok.DataAccess.Repositories.Implementations
         }
 
 
-        public IQueryable<T> GetAll()
+        public IQueryable<T> GetAll(params string[] includes)
         {
-            return _table.AsQueryable();
+            var query= _table.AsQueryable();
+
+            if (includes is not null&&includes.Length > 0)
+            {
+                foreach (var include in includes)
+                {
+                    query = query.Include(include);
+                }
+            }
+            return query;
+           
         }
 
-        public IQueryable<T> GetFiltered(Expression<Func<T, bool>> expression)
+        public IQueryable<T> GetFiltered(Expression<Func<T, bool>> expression, params string[] includes)
         {
-            return _table.Where(expression).AsQueryable();
+            var query = _table.AsQueryable();
+            if (includes is not null && includes.Length > 0)
+            {
+                foreach (var include in includes)
+                {
+                    query = query.Include(include);
+                }
+            }
+
+            return query.Where(expression);
+
         }
 
         public async Task CreateAsync(T entity)
@@ -54,14 +74,33 @@ namespace Pustok.DataAccess.Repositories.Implementations
             entity.IsDeleted = true;
         }
 
-        public async Task<T> GetSingleAsync(Expression<Func<T, bool>> expression)
+        public async Task<T> GetSingleAsync(Expression<Func<T, bool>> expression, params string[] includes)
         {
-            return await _table.FirstOrDefaultAsync(expression);
+            var query = _table.AsQueryable();
+            if (includes is not null && includes.Length > 0)
+            {
+                foreach (var include in includes)
+                {
+                    query = query.Include(include);
+                }
+            }
+
+            return await query.FirstOrDefaultAsync(expression);
+
+
         }
 
-        public async Task<bool> IsExistAsync(Expression<Func<T, bool>> expression)
+        public async Task<bool> IsExistAsync(Expression<Func<T, bool>> expression, params string[] includes)
         {
-            return await _table.AnyAsync(expression);
+            var query = _table.AsQueryable();
+            if (includes is not null && includes.Length > 0)
+            {
+                foreach (var include in includes)
+                {
+                  query = query.Include(include);
+                }
+            }
+            return await query.AnyAsync(expression);
         }
 
         public async Task<int> SaveAsync()
