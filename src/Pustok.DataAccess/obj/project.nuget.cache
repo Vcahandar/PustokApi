@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "1lrOBAjzE4Sabf5x35olyIB14fJ7TcHJQfqgDIDOvYAqzY7+VtrzmbwrnWdO4YSWDG0a/2QZtNXmNRwOi6T2+g==",
+  "dgSpecHash": "6PUCbwEJoDumvFksApMTNso3hsZu0QG1lLYSZ0WW/dnhS8yo4wXB06hxZ5nroy7+6qmUhcq3j/azxVP0gNpkuQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.DataAccess\\Pustok.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.28\\microsoft.aspnetcore.cryptography.internal.6.0.28.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.28\\microsoft.aspnetcore.cryptography.keyderivation.6.0.28.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.28\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.28.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.7\\microsoft.data.sqlclient.2.1.7.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
@@ -20,6 +23,8 @@
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.1\\microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.identity.core\\6.0.28\\microsoft.extensions.identity.core.6.0.28.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.identity.stores\\6.0.28\\microsoft.extensions.identity.stores.6.0.28.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",

@@ -17,6 +17,7 @@ namespace Pustok.Business.ServiceRegisterations
 
             services.AddScoped<IAuthorService, AuthorService>();
             services.AddScoped<IBookService, BookService>();
+            services.AddScoped<IUserService, UserService>();
 
             services.AddFluentValidation(o => o.RegisterValidatorsFromAssembly(typeof
                 (AuthorPostDtoValidator).Assembly));
