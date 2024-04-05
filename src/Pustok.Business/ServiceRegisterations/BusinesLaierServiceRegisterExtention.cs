@@ -1,5 +1,7 @@
 ﻿using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
+using Pustok.Business.HelperServices.Implementations;
+using Pustok.Business.HelperServices.Interface;
 using Pustok.Business.MappingProfiles;
 using Pustok.Business.Services.Implementations;
 using Pustok.Business.Services.Interfaces;
@@ -18,6 +20,8 @@ namespace Pustok.Business.ServiceRegisterations
             services.AddScoped<IAuthorService, AuthorService>();
             services.AddScoped<IBookService, BookService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IAuthService, AuthService>();
 
             services.AddFluentValidation(o => o.RegisterValidatorsFromAssembly(typeof
                 (AuthorPostDtoValidator).Assembly));
