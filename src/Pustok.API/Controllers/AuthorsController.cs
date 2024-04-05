@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Pustok.Business.DTOs.AuthorDtos;
 using Pustok.Business.DTOs.CommonDtos;
@@ -39,6 +40,23 @@ namespace Pustok.API.Controllers
                 await _authorService.CreateAuthorAsync(authorPostDto);
                 return StatusCode((int)HttpStatusCode.Created,
                     new ResponseDto(HttpStatusCode.Created, "Author successfully created"));
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Put([FromForm] AuthorPutDto authorPutDto)
+        {
+            var response = await _authorService.UpdateAuthorAsync(authorPutDto);
+
+            return StatusCode((int)response.StatusCode, response.Message);
+
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var response = await _authorService.DeleteAuthorAsync(id);
+
+            return StatusCode((int)response.StatusCode, response.Message);
         }
     }
 }

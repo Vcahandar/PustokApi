@@ -11,6 +11,7 @@ namespace Pustok.Business.MappingProfiles
         {
             CreateMap<AuthorPostDto, Author>().ReverseMap();
             CreateMap<Author, AuthorGetDto>().ReverseMap();
+            CreateMap<AuthorPutDto, Author>().ReverseMap();
         }
     }
 }

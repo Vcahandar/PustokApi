@@ -107,6 +107,18 @@ namespace Pustok.DataAccess.Repositories.Implementations
         {
             return await _context.SaveChangesAsync();
         }
+
+        public async Task<T> GetByIdAsync(Guid id, params string[] includes)
+        {
+            var query = _context.Set<T>().AsQueryable();
+
+            foreach (var include in includes)
+            {
+                query = query.Include(include);
+            }
+
+            return await query.FirstOrDefaultAsync(x => x.Id == id);
+        }
     }
 
 }
