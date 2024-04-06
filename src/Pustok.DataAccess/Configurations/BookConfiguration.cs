@@ -28,6 +28,7 @@ namespace Pustok.DataAccess.Configurations
             builder.HasCheckConstraint("Rating", "Rating BETWEEN 1 AND 5");
 
             builder.HasMany(b => b.BookAuthors).WithOne(ba => ba.Book);
+            builder.HasMany(b=>b.BookImages).WithOne(bi => bi.Book);
 
 
 

@@ -214,6 +214,10 @@ namespace Pustok.DataAccess.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<string>("MainImage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(250)
@@ -275,6 +279,43 @@ namespace Pustok.DataAccess.Migrations
                     b.HasIndex("BookId");
 
                     b.ToTable("BookAuthors");
+                });
+
+            modelBuilder.Entity("Pustok.Core.Entities.BookImage", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.ToTable("BookImages");
                 });
 
             modelBuilder.Entity("Pustok.Core.Entities.Identity.AppUser", b =>
@@ -416,6 +457,17 @@ namespace Pustok.DataAccess.Migrations
                     b.Navigation("Book");
                 });
 
+            modelBuilder.Entity("Pustok.Core.Entities.BookImage", b =>
+                {
+                    b.HasOne("Pustok.Core.Entities.Book", "Book")
+                        .WithMany("BookImages")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+                });
+
             modelBuilder.Entity("Pustok.Core.Entities.Author", b =>
                 {
                     b.Navigation("BookAuthors");
@@ -424,6 +476,8 @@ namespace Pustok.DataAccess.Migrations
             modelBuilder.Entity("Pustok.Core.Entities.Book", b =>
                 {
                     b.Navigation("BookAuthors");
+
+                    b.Navigation("BookImages");
                 });
 #pragma warning restore 612, 618
         }

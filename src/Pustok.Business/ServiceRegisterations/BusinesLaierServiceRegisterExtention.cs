@@ -17,10 +17,13 @@ namespace Pustok.Business.ServiceRegisterations
             services.AddAutoMapper(typeof(AuthorMapper).Assembly);
             services.AddAutoMapper(typeof(BookMapper).Assembly);
 
+            services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IFileService, FileService>();
+
+
             services.AddScoped<IAuthorService, AuthorService>();
             services.AddScoped<IBookService, BookService>();
             services.AddScoped<IUserService, UserService>();
-            services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IAuthService, AuthService>();
 
             services.AddFluentValidation(o => o.RegisterValidatorsFromAssembly(typeof

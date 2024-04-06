@@ -23,7 +23,7 @@ namespace Pustok.DataAccess.Repositories.Implementations
         }
 
 
-        public IQueryable<T> GetAll(params string[] includes)
+        public IQueryable<T> GetAll(bool isTracking = false, params string[] includes)
         {
             var query= _table.AsQueryable();
 
@@ -34,11 +34,11 @@ namespace Pustok.DataAccess.Repositories.Implementations
                     query = query.Include(include);
                 }
             }
-            return query;
+            return isTracking ? query : query.AsNoTracking();
            
         }
 
-        public IQueryable<T> GetFiltered(Expression<Func<T, bool>> expression, params string[] includes)
+        public IQueryable<T> GetFiltered(Expression<Func<T, bool>> expression, bool isTracking = false, params string[] includes)
         {
             var query = _table.AsQueryable();
             if (includes is not null && includes.Length > 0)
@@ -49,7 +49,7 @@ namespace Pustok.DataAccess.Repositories.Implementations
                 }
             }
 
-            return query.Where(expression);
+            return isTracking ? query.Where(expression) : query.AsNoTracking().Where(expression);
 
         }
 
@@ -74,7 +74,7 @@ namespace Pustok.DataAccess.Repositories.Implementations
             entity.IsDeleted = true;
         }
 
-        public async Task<T> GetSingleAsync(Expression<Func<T, bool>> expression, params string[] includes)
+        public async Task<T> GetSingleAsync(Expression<Func<T, bool>> expression, bool isTracking = false, params string[] includes)
         {
             var query = _table.AsQueryable();
             if (includes is not null && includes.Length > 0)
@@ -85,12 +85,12 @@ namespace Pustok.DataAccess.Repositories.Implementations
                 }
             }
 
-            return await query.FirstOrDefaultAsync(expression);
+            return isTracking ? await query.FirstOrDefaultAsync(expression) : await query.AsNoTracking().FirstOrDefaultAsync(expression);
 
 
         }
 
-        public async Task<bool> IsExistAsync(Expression<Func<T, bool>> expression, params string[] includes)
+        public async Task<bool> IsExistAsync(Expression<Func<T, bool>> expression, bool isTracking = false, params string[] includes)
         {
             var query = _table.AsQueryable();
             if (includes is not null && includes.Length > 0)
@@ -100,7 +100,7 @@ namespace Pustok.DataAccess.Repositories.Implementations
                   query = query.Include(include);
                 }
             }
-            return await query.AnyAsync(expression);
+            return isTracking ? await query.AnyAsync(expression) : await query.AsNoTracking().AnyAsync(expression);
         }
 
         public async Task<int> SaveAsync()
@@ -108,7 +108,7 @@ namespace Pustok.DataAccess.Repositories.Implementations
             return await _context.SaveChangesAsync();
         }
 
-        public async Task<T> GetByIdAsync(Guid id, params string[] includes)
+        public async Task<T> GetByIdAsync(Guid id, bool isTracking = false, params string[] includes)
         {
             var query = _context.Set<T>().AsQueryable();
 
@@ -117,7 +117,7 @@ namespace Pustok.DataAccess.Repositories.Implementations
                 query = query.Include(include);
             }
 
-            return await query.FirstOrDefaultAsync(x => x.Id == id);
+            return isTracking ? await query.FirstOrDefaultAsync(x => x.Id == id) : await query.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
         }
     }
 

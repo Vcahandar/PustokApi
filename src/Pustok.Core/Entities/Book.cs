@@ -16,7 +16,10 @@ namespace Pustok.Core.Entities
         public int Rating { get; set; }
         public int PageCount { get; set; }
         public int StockCount { get; set; }
+        public string MainImage { get; set; }
         public ICollection<BookAuthor>? BookAuthors { get; set; }
+        public ICollection<BookImage>? BookImages { get; set; }
+
 
     }
 }

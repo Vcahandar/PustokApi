@@ -10,7 +10,7 @@ namespace Pustok.API.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class BooksController : ControllerBase
     {
         private readonly IBookService _bookService;
@@ -29,7 +29,7 @@ namespace Pustok.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(BookPostDto bookPostDto)
+        public async Task<IActionResult> Create([FromForm]BookPostDto bookPostDto)
         {
             await _bookService.CreateBookAsync(bookPostDto);
             return StatusCode((int)HttpStatusCode.Created, new ResponseDto(HttpStatusCode.Created,

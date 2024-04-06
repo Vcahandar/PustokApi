@@ -1,11 +1,71 @@
 {
   "Version": 1,
-  "Hash": "zDO9ih7mHOwM0dyVB3LirSv+jHa5LWF8qO0v3KlKeYk=",
+  "Hash": "GX0u8bMm9UhmSOQ80o5oDXKVNlZvFBKzwE/6NMIgOzE=",
   "Source": "Pustok.API",
   "BasePath": "_content/Pustok.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Pustok.API\\wwwroot",
+      "Source": "Pustok.API",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\",
+      "BasePath": "_content/Pustok.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\41652a21-66ff-48f3-9cbe-3ce578166427-product-7.jpg",
+      "SourceId": "Pustok.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\",
+      "BasePath": "_content/Pustok.API",
+      "RelativePath": "assets/uploads/images/book-images/41652a21-66ff-48f3-9cbe-3ce578166427-product-7.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\uploads\\images\\book-images\\41652a21-66ff-48f3-9cbe-3ce578166427-product-7.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\478b8c12-0844-476f-8e88-288c338471fc-product-3.jpg",
+      "SourceId": "Pustok.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\",
+      "BasePath": "_content/Pustok.API",
+      "RelativePath": "assets/uploads/images/book-images/478b8c12-0844-476f-8e88-288c338471fc-product-3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\uploads\\images\\book-images\\478b8c12-0844-476f-8e88-288c338471fc-product-3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\6b468f1a-e6ec-4585-b77c-cb55050cc5d9-product-5.jpg",
+      "SourceId": "Pustok.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\",
+      "BasePath": "_content/Pustok.API",
+      "RelativePath": "assets/uploads/images/book-images/6b468f1a-e6ec-4585-b77c-cb55050cc5d9-product-5.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\uploads\\images\\book-images\\6b468f1a-e6ec-4585-b77c-cb55050cc5d9-product-5.jpg"
+    }
+  ]
 }

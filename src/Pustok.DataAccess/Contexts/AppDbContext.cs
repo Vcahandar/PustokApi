@@ -22,6 +22,7 @@ namespace Pustok.DataAccess.Contexts
         public DbSet<Author> Authors { get; set; } = null!;
         public DbSet<Book> Books { get; set; } = null!;
         public DbSet<BookAuthor> BookAuthors { get; set; } = null!;
+        public DbSet<BookImage> BookImages { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,6 +31,9 @@ namespace Pustok.DataAccess.Contexts
 
             modelBuilder.Entity<Author>().HasQueryFilter(a => !a.IsDeleted);
             modelBuilder.Entity<Book>().HasQueryFilter(a => !a.IsDeleted);
+            modelBuilder.Entity<BookAuthor>().HasQueryFilter(a => !a.IsDeleted);
+            modelBuilder.Entity<BookImage>().HasQueryFilter(a => !a.IsDeleted);
+
             base.OnModelCreating(modelBuilder);
         }
 

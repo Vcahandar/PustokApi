@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\41652a21-66ff-48f3-9cbe-3ce578166427-product-7.jpg",
+      "PackagePath": "staticwebassets\\assets\\uploads\\images\\book-images\\41652a21-66ff-48f3-9cbe-3ce578166427-product-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\478b8c12-0844-476f-8e88-288c338471fc-product-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\uploads\\images\\book-images\\478b8c12-0844-476f-8e88-288c338471fc-product-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\6b468f1a-e6ec-4585-b77c-cb55050cc5d9-product-5.jpg",
+      "PackagePath": "staticwebassets\\assets\\uploads\\images\\book-images\\6b468f1a-e6ec-4585-b77c-cb55050cc5d9-product-5.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Pustok.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Pustok.API.props",
+      "PackagePath": "build\\Pustok.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Pustok.API.props",
+      "PackagePath": "buildMultiTargeting\\Pustok.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Pustok.API.props",
+      "PackagePath": "buildTransitive\\Pustok.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
