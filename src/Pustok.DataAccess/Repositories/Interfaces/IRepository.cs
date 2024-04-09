@@ -14,7 +14,7 @@ namespace Pustok.DataAccess.Repositories.Interfaces
         IQueryable<T> GetFiltered(Expression<Func<T, bool>> expression, bool isTracking = false, params string[] includes);
         Task<T> GetByIdAsync(Guid id, bool isTracking = false, params string[] includes);
 
-        Task<T> GetSingleAsync(Expression<Func<T, bool>> expression, bool isTracking = false, params string[] includes);
+        Task<T> GetSingleAsync(Expression<Func<T, bool>> expression, params string[] includes);
         Task CreateAsync(T entity);
         void Update(T entity);
         void Delete(T entity);

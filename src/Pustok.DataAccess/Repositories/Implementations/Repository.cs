@@ -74,7 +74,7 @@ namespace Pustok.DataAccess.Repositories.Implementations
             entity.IsDeleted = true;
         }
 
-        public async Task<T> GetSingleAsync(Expression<Func<T, bool>> expression, bool isTracking = false, params string[] includes)
+        public async Task<T> GetSingleAsync(Expression<Func<T, bool>> expression, params string[] includes)
         {
             var query = _table.AsQueryable();
             if (includes is not null && includes.Length > 0)
@@ -85,7 +85,7 @@ namespace Pustok.DataAccess.Repositories.Implementations
                 }
             }
 
-            return isTracking ? await query.FirstOrDefaultAsync(expression) : await query.AsNoTracking().FirstOrDefaultAsync(expression);
+            return await query.FirstOrDefaultAsync(expression);
 
 
         }

@@ -8,7 +8,7 @@ using System.Net;
 
 namespace Pustok.API.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
     //[Authorize]
     public class BooksController : ControllerBase
@@ -34,6 +34,25 @@ namespace Pustok.API.Controllers
             await _bookService.CreateBookAsync(bookPostDto);
             return StatusCode((int)HttpStatusCode.Created, new ResponseDto(HttpStatusCode.Created,
                                                          "Book successfully created"));
+        }
+
+
+        [HttpPut]
+        public async Task<IActionResult> Put([FromForm] BookPutDto bookPutDto)
+        {
+            try
+            {
+                var response = await _bookService.UpdateBookAsync(bookPutDto);
+
+                return StatusCode((int)response.StatusCode, response.Message);
+            }
+            catch (Exception ex)
+            {
+
+                  return NotFound(ex.Message);
+
+            }
+
         }
     }
 }

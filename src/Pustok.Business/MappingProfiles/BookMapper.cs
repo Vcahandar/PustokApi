@@ -21,6 +21,10 @@ namespace Pustok.Business.MappingProfiles
             CreateMap<Book, BookGetDto>()
                 .ForCtorParam("Authors", x => x.MapFrom(b => b.BookAuthors.Select(ba =>
                 new AuthorGetDto ( ba.Author.Id,ba.Author.Fullname ))));
+
+            CreateMap<BookPutDto, Book>()
+                .ForMember(b => b.BookAuthors, x => x.MapFrom(dto => dto.AuthorsIds.Select(id =>
+                new BookAuthor { AuthorId = id }))).ReverseMap();
         }
     }
 }

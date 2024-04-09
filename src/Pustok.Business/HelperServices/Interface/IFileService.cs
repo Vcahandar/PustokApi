@@ -10,5 +10,8 @@ namespace Pustok.Business.HelperServices.Interface
     public interface IFileService
     {
        Task<string> FileUploadAsync(IFormFile file, string path, string type, int size);
+        void DeleteFile(string path);
+
+
     }
 }

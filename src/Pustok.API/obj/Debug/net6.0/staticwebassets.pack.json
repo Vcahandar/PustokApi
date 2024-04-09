@@ -1,6 +1,18 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\194d406a-502b-4e0a-a033-b453f19962c5-autography-image-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\uploads\\images\\book-images\\194d406a-502b-4e0a-a033-b453f19962c5-autography-image-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\30af97f2-5b20-4055-aded-0dbe2aeee5a4-autography-image-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\uploads\\images\\book-images\\30af97f2-5b20-4055-aded-0dbe2aeee5a4-autography-image-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\34079762-e68a-4214-a29f-8bd15fa1531c-product-12.jpg",
+      "PackagePath": "staticwebassets\\assets\\uploads\\images\\book-images\\34079762-e68a-4214-a29f-8bd15fa1531c-product-12.jpg"
+    },
+    {
       "Id": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\41652a21-66ff-48f3-9cbe-3ce578166427-product-7.jpg",
       "PackagePath": "staticwebassets\\assets\\uploads\\images\\book-images\\41652a21-66ff-48f3-9cbe-3ce578166427-product-7.jpg"
     },
@@ -9,8 +21,36 @@
       "PackagePath": "staticwebassets\\assets\\uploads\\images\\book-images\\478b8c12-0844-476f-8e88-288c338471fc-product-3.jpg"
     },
     {
+      "Id": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\67d88b4c-7b9c-4d80-9635-b4f1f67a4d55-autography-image-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\uploads\\images\\book-images\\67d88b4c-7b9c-4d80-9635-b4f1f67a4d55-autography-image-4.jpg"
+    },
+    {
       "Id": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\6b468f1a-e6ec-4585-b77c-cb55050cc5d9-product-5.jpg",
       "PackagePath": "staticwebassets\\assets\\uploads\\images\\book-images\\6b468f1a-e6ec-4585-b77c-cb55050cc5d9-product-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\883edff5-4938-47f0-9d7a-98838bc7e4de-author-3.png",
+      "PackagePath": "staticwebassets\\assets\\uploads\\images\\book-images\\883edff5-4938-47f0-9d7a-98838bc7e4de-author-3.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\8ddc9fe4-791d-403d-ac0c-b6267fecbf14-product-5.jpg",
+      "PackagePath": "staticwebassets\\assets\\uploads\\images\\book-images\\8ddc9fe4-791d-403d-ac0c-b6267fecbf14-product-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\9acca1f6-3051-49ff-87f5-3562f6875b7c-autography-image-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\uploads\\images\\book-images\\9acca1f6-3051-49ff-87f5-3562f6875b7c-autography-image-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\9e2a9b5e-c3df-46e6-921f-7a1bbaa83205-autography-image-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\uploads\\images\\book-images\\9e2a9b5e-c3df-46e6-921f-7a1bbaa83205-autography-image-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\b03c4fef-289b-404a-bd8c-61621de98af6-autography-image-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\uploads\\images\\book-images\\b03c4fef-289b-404a-bd8c-61621de98af6-autography-image-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\PustokAPI\\src\\Pustok.API\\wwwroot\\assets\\uploads\\images\\book-images\\e548aa2e-274f-4e47-913d-e2acd032e4b1-product-7.jpg",
+      "PackagePath": "staticwebassets\\assets\\uploads\\images\\book-images\\e548aa2e-274f-4e47-913d-e2acd032e4b1-product-7.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Pustok.API.Microsoft.AspNetCore.StaticWebAssets.props",

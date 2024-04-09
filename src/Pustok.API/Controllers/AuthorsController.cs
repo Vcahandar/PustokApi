@@ -9,7 +9,7 @@ using System.Net;
 
 namespace Pustok.API.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class AuthorsController : ControllerBase
     {

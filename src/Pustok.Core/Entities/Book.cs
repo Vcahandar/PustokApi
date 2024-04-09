@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Pustok.Core.Entities
 {
@@ -19,7 +20,10 @@ namespace Pustok.Core.Entities
         public string MainImage { get; set; }
         public ICollection<BookAuthor>? BookAuthors { get; set; }
         public ICollection<BookImage>? BookImages { get; set; }
-
+        public Book()
+        {
+            BookImages = new List<BookImage>();
+        }
 
     }
 }

@@ -3,11 +3,9 @@ using Microsoft.AspNetCore.Http;
 using Pustok.Business.Exceptions.FileExceptions;
 using Pustok.Business.Helpers.Extensions;
 using Pustok.Business.HelperServices.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using F = System.IO;
+
+
 
 namespace Pustok.Business.HelperServices.Implementations
 {
@@ -36,5 +34,30 @@ namespace Pustok.Business.HelperServices.Implementations
             return fileName;
 
         }
+
+        //public static void DeleteFile(string[] path)
+        //{
+        //    var oldPath = Path.Combine(path);
+
+        //    if (File.Exists(oldPath))
+        //        File.Delete(oldPath);
+        //}
+
+        //public static void DeleteFile(string path)
+        //{
+        //    if (File.Exists(path))
+        //        File.Delete(path);
+        //}
+
+
+        public void DeleteFile(string path)
+        {
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+
+
     }
 }
