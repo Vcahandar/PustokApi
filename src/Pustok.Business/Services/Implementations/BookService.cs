@@ -1,19 +1,14 @@
 ﻿ using AutoMapper;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Pustok.Business.DTOs.BookDtos;
 using Pustok.Business.DTOs.CommonDtos;
 using Pustok.Business.Exceptions.BookExceptions;
-using Pustok.Business.Exceptions.FileExceptions;
-using Pustok.Business.HelperServices.Implementations;
 using Pustok.Business.HelperServices.Interface;
 using Pustok.Business.Services.Interfaces;
 using Pustok.Core.Entities;
-using Pustok.DataAccess.Repositories.Implementations;
 using Pustok.DataAccess.Repositories.Interfaces;
 using System.Net;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 
 namespace Pustok.Business.Services.Implementations
@@ -149,7 +144,13 @@ namespace Pustok.Business.Services.Implementations
 
         public async Task<BookGetDto> GetBookByIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var book = await _bookRepository.GetSingleAsync(b => b.Id == id, "BookAuthors.Author", "BookImages");
+
+            if (book is null)
+                throw new BookNotFoundException($"The book with ID {id} was not found");
+
+            var bookDto = _mapper.Map<BookGetDto>(book);
+            return bookDto;
         }
 
 

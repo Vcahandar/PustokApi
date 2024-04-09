@@ -28,6 +28,12 @@ namespace Pustok.API.Controllers
             return Ok(await _bookService.GetAllBooksAsync(search));
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById([FromRoute] Guid id)
+        {
+            return Ok(await _bookService.GetBookByIdAsync(id));
+        }
+
 
 
         [HttpPost]
@@ -54,5 +60,8 @@ namespace Pustok.API.Controllers
 
             return StatusCode((int)response.StatusCode, response.Message);
         }
+
+
+
     }
 }
