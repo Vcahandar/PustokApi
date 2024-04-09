@@ -12,6 +12,8 @@ namespace Pustok.Business.Services.Interfaces
         Task<BookGetDto> GetBookByIdAsync(Guid id);
         Task CreateBookAsync(BookPostDto bookPostDto);
         Task<ResponseDto> UpdateBookAsync(BookPutDto bookPutDto);
+        Task<ResponseDto> DeleteBookAsync(Guid id);
+
 
     }
 }

@@ -28,6 +28,8 @@ namespace Pustok.API.Controllers
             return Ok(await _bookService.GetAllBooksAsync(search));
         }
 
+
+
         [HttpPost]
         public async Task<IActionResult> Create([FromForm]BookPostDto bookPostDto)
         {
@@ -38,21 +40,19 @@ namespace Pustok.API.Controllers
 
 
         [HttpPut]
-        public async Task<IActionResult> Put([FromForm] BookPutDto bookPutDto)
+        public async Task<IActionResult> Update([FromForm] BookPutDto bookPutDto)
         {
-            try
-            {
                 var response = await _bookService.UpdateBookAsync(bookPutDto);
-
                 return StatusCode((int)response.StatusCode, response.Message);
-            }
-            catch (Exception ex)
-            {
+        }
 
-                  return NotFound(ex.Message);
 
-            }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var response = await _bookService.DeleteBookAsync(id);
 
+            return StatusCode((int)response.StatusCode, response.Message);
         }
     }
 }

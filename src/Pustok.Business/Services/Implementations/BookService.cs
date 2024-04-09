@@ -21,7 +21,6 @@ namespace Pustok.Business.Services.Implementations
     public class BookService : IBookService
     {
         private readonly IBookRepository _bookRepository;
-        private readonly IHttpContextAccessor _httpContextAccessor;
 
         private readonly IMapper _mapper;
         private readonly IWebHostEnvironment _webHostEnvironment;
@@ -29,21 +28,25 @@ namespace Pustok.Business.Services.Implementations
         private readonly IFileService _fileService;
 
         public BookService(IBookRepository bookRepository, IMapper mapper,
-                            IFileService fileService, IHttpContextAccessor httpContextAccessor,
+                            IFileService fileService,
                             IWebHostEnvironment webHostEnvironment)
         {
             _bookRepository = bookRepository;
             _mapper = mapper;
             _fileService = fileService;
-            _httpContextAccessor = httpContextAccessor;
             _webHostEnvironment = webHostEnvironment;
         }
 
 
         public async Task<List<BookGetDto>> GetAllBooksAsync(string? search)
         {
-            var books = await _bookRepository.GetFiltered(b => search != null ?
-            b.Name.Contains(search) : true, includes: "BookAuthors.Author").ToListAsync();
+            var books = await _bookRepository.GetFiltered(
+                b => search != null ? b.Name.Contains(search) : true,
+                isTracking: false,
+                includes: new[] { "BookAuthors.Author", "BookImages" }
+            ).ToListAsync();
+
+
 
             var booksDtos = _mapper.Map<List<BookGetDto>>(books);
 
@@ -82,23 +85,6 @@ namespace Pustok.Business.Services.Implementations
         }
 
 
-
-
-
-        public async Task<BookGetDto> GetBookByIdAsync(Guid id)
-        {
-            //ArgumentNullException.ThrowIfNull(id);
-
-            //var dbBlog = await _bookRepository.GetSingleAsync(b => b.Id == Guid.Parse(id) && !b.IsDeleted, tracking: true, "AppUser", "BlogImage", "BlogTopics.Topic");
-
-            //var author = await _bookRepository.GetSingleAsync(b => b.Id == authorPutDto.Id);
-
-
-            throw new NotImplementedException();
-
-
-
-        }
 
         public async Task<ResponseDto> UpdateBookAsync(BookPutDto bookPutDto)
         {
@@ -148,12 +134,24 @@ namespace Pustok.Business.Services.Implementations
 
         }
 
+        public async Task<ResponseDto> DeleteBookAsync(Guid Id)
+        {
+            var book = await _bookRepository.GetSingleAsync(b => b.Id == Id);
+            if (book is null)
+                throw new BookNotFoundException($"The book with ID {Id} was not found");
+
+            _bookRepository.SoftDelete(book);
+            await _bookRepository.SaveAsync();
+
+            return new(HttpStatusCode.OK, "The book has been successfully deleted");
+        }
 
 
-        private static readonly string[] includes = {
-            nameof(Book.BookImages),
-            nameof(Book.BookAuthors),
-            $"{nameof(Book.BookAuthors)}.{nameof(Author.Fullname)}",
-        };
+        public async Task<BookGetDto> GetBookByIdAsync(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+
     }
 }

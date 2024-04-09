@@ -14,6 +14,9 @@ namespace Pustok.Business.MappingProfiles
     {
         public BookMapper()
         {
+            CreateMap<BookImage, BookImageGetDto>().ReverseMap();
+
+
             CreateMap<BookPostDto,Book>()
                 .ForMember(b=>b.BookAuthors, x=>x.MapFrom(dto=>dto.AuthorsIds.Select(id=>
                 new BookAuthor {AuthorId = id }))).ReverseMap();
